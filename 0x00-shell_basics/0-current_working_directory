@@ -1,6 +1,3 @@
 #!/bin/bash
-
-current_dir=$(pwd)
-absolute_path=$(realpath "$current_dir")
-
+absolute_path=$(readlink -f .)
 echo "$absolute_path"
