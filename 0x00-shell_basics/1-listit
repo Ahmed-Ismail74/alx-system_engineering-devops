@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -p | tr '\n' ' '
-echo
+ls -p | tr '\n' '\0' | xargs -0 -n 1 echo
